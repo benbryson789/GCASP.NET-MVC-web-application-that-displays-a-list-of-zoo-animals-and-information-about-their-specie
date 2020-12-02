@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Assessment7a.Models.Animal>
+
+@{
+    ViewData["Title"] = "Animals";
+}
+
+<h1>Animals</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Specie.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Species">
+            <div class="form-group">
+                <label class="control-label">Animal Species</label>
+                <input name="AnimalSpecies" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Species" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

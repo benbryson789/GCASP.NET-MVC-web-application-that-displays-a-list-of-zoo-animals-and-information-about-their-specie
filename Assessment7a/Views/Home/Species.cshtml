@@ -1,0 +1,30 @@
+﻿@model Assessment7a.Models.Animal2
+
+@{
+    ViewData["Title"] = "Specie Details";
+}
+
+<h1>Specie Details</h1>
+
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Diet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Diet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Habitat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Habitat)
+        </dd>
+    </dl>
+</div>
